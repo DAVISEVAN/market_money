@@ -1,0 +1,27 @@
+require 'rails_helper'
+
+RSpec.describe "Vendors API", type: :request do
+  describe 'DELETE /api/v0/vendors/:id' do
+    context 'when the vendor exists' do
+      let!(:vendor) { create(:vendor) }
+
+      it 'deletes the vendor' do
+        expect {
+          delete "/api/v0/vendors/#{vendor.id}"
+        }.to change(Vendor, :count).by(-1)
+
+        expect(response).to have_http_status(:no_content)
+      end
+    end
+
+    context 'when the vendor does not exist' do
+      it 'returns a 404 not found status' do
+        delete "/api/v0/vendors/999999"
+
+        expect(response).to have_http_status(:not_found)
+        json_response = JSON.parse(response.body, symbolize_names: true)
+        expect(json_response[:errors].first[:detail]).to eq("Couldn't find Vendor with 'id'=999999")
+      end
+    end
+  end
+end
