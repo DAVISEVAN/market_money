@@ -7,7 +7,7 @@ RSpec.describe "Market Money API" do
     vendor = create(:vendor)
 
     market_vendors = MarketVendor.create(market_id: id, vendor_id: vendor.id)
-    binding.pry
+
     get "/api/v0/markets/#{id}"
 
     markets = JSON.parse(response.body, symbolize_names: true)
@@ -45,5 +45,19 @@ RSpec.describe "Market Money API" do
       expect(market).to have_key(:vendor_count)
       expect(market[:vendor_count]).to eq(1)
     end
+  end
+
+  it "will not return a market with a invalid id " do
+    id = create(:market).id
+
+    vendor = create(:vendor)
+
+    market_vendors = MarketVendor.create(market_id: id, vendor_id: vendor.id)
+
+    get "/api/v0/markets/#{Faker::Number.number(digits:10)}"
+
+    markets = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response).to be_unsuccessful
   end
 end
