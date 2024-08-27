@@ -43,6 +43,6 @@ RSpec.describe "Market Money API" do
     expect(market[:lon]).to be_a(String)
     
     expect(market).to have_key(:vendor_count)
-    expect(market[:vendor_count]).to be_a(String)
+    expect(market[:vendor_count]).to eq(1)
   end
 end
