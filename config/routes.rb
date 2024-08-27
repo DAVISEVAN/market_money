@@ -14,4 +14,9 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api do
+    namespace :v0 do
+      resources :markets, only: [:index]
+    end
+  end
 end
