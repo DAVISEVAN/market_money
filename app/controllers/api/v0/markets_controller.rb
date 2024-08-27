@@ -3,6 +3,6 @@ class Api::V0::MarketsController < ApplicationController
   end
 
   def show 
-    render json: Book.find(params[:id])
+    render json: Market.find(params[:id])
   end
 end
