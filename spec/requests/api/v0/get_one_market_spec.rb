@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Market Money API"
+RSpec.describe "Market Money API" do
   it "can get one market by its id" do
     id = create(:market).id
     
