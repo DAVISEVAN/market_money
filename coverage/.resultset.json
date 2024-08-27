@@ -218,11 +218,11 @@
         "lines": [
           1,
           1,
-          4,
-          4,
-          4,
-          4,
-          4,
+          2,
+          2,
+          2,
+          2,
+          2,
           null,
           null
         ]
@@ -272,18 +272,6 @@
           null
         ]
       },
-      "/Users/janlehigh/turing/3mod/projects/market_money/spec/models/vendor_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
       "/Users/janlehigh/turing/3mod/projects/market_money/app/models/vendor.rb": {
         "lines": [
           1,
@@ -299,8 +287,50 @@
           1,
           null
         ]
+      },
+      "/Users/janlehigh/turing/3mod/projects/market_money/app/controllers/api/v0/markets_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/janlehigh/turing/3mod/projects/market_money/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/janlehigh/turing/3mod/projects/market_money/app/serializers/market_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1724800543
+    "timestamp": 1724801375
   }
 }

@@ -6,9 +6,8 @@ RSpec.describe "Market Money API" do
     
     vendor = create(:vendor)
 
-    market_vendors = MarketVendor.create(market_id: id, vendor_id: vendor)
-
-
+    market_vendors = MarketVendor.create(market_id: id, vendor_id: vendor.id)
+    binding.pry
     get "/api/v0/markets/#{id}"
 
     markets = JSON.parse(response.body, symbolize_names: true)
