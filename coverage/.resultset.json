@@ -1,11 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-<<<<<<< HEAD
       "/Users/janlehigh/turing/3mod/projects/market_money/config/environment.rb": {
-=======
-      "/Users/evandavis/Desktop/market_money/config/environment.rb": {
->>>>>>> c463811bb61f4ed24b1802e1ea7a34b1641369d6
         "lines": [
           null,
           1,
@@ -14,11 +10,7 @@
           1
         ]
       },
-<<<<<<< HEAD
       "/Users/janlehigh/turing/3mod/projects/market_money/config/application.rb": {
-=======
-      "/Users/evandavis/Desktop/market_money/config/application.rb": {
->>>>>>> c463811bb61f4ed24b1802e1ea7a34b1641369d6
         "lines": [
           1,
           null,
@@ -66,11 +58,7 @@
           null
         ]
       },
-<<<<<<< HEAD
       "/Users/janlehigh/turing/3mod/projects/market_money/config/boot.rb": {
-=======
-      "/Users/evandavis/Desktop/market_money/config/boot.rb": {
->>>>>>> c463811bb61f4ed24b1802e1ea7a34b1641369d6
         "lines": [
           1,
           null,
@@ -78,11 +66,7 @@
           1
         ]
       },
-<<<<<<< HEAD
       "/Users/janlehigh/turing/3mod/projects/market_money/config/environments/test.rb": {
-=======
-      "/Users/evandavis/Desktop/market_money/config/environments/test.rb": {
->>>>>>> c463811bb61f4ed24b1802e1ea7a34b1641369d6
         "lines": [
           1,
           null,
@@ -147,19 +131,12 @@
           null,
           null,
           1,
-<<<<<<< HEAD
           null,
           null,
           null
         ]
       },
       "/Users/janlehigh/turing/3mod/projects/market_money/config/initializers/cors.rb": {
-=======
-          null
-        ]
-      },
-      "/Users/evandavis/Desktop/market_money/config/initializers/cors.rb": {
->>>>>>> c463811bb61f4ed24b1802e1ea7a34b1641369d6
         "lines": [
           null,
           null,
@@ -179,11 +156,7 @@
           null
         ]
       },
-<<<<<<< HEAD
       "/Users/janlehigh/turing/3mod/projects/market_money/config/initializers/filter_parameter_logging.rb": {
-=======
-      "/Users/evandavis/Desktop/market_money/config/initializers/filter_parameter_logging.rb": {
->>>>>>> c463811bb61f4ed24b1802e1ea7a34b1641369d6
         "lines": [
           null,
           null,
@@ -195,11 +168,7 @@
           null
         ]
       },
-<<<<<<< HEAD
       "/Users/janlehigh/turing/3mod/projects/market_money/config/initializers/inflections.rb": {
-=======
-      "/Users/evandavis/Desktop/market_money/config/initializers/inflections.rb": {
->>>>>>> c463811bb61f4ed24b1802e1ea7a34b1641369d6
         "lines": [
           null,
           null,
@@ -219,33 +188,43 @@
           null
         ]
       },
-<<<<<<< HEAD
+      "/Users/janlehigh/turing/3mod/projects/market_money/spec/factories/market_vendors.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/janlehigh/turing/3mod/projects/market_money/spec/factories/markets.rb": {
-=======
-      "/Users/evandavis/Desktop/market_money/spec/factories/market_vendors.rb": {
->>>>>>> c463811bb61f4ed24b1802e1ea7a34b1641369d6
         "lines": [
           1,
           1,
-          1,
-          1,
-<<<<<<< HEAD
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-=======
->>>>>>> c463811bb61f4ed24b1802e1ea7a34b1641369d6
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
           null,
           null
         ]
       },
-<<<<<<< HEAD
       "/Users/janlehigh/turing/3mod/projects/market_money/spec/factories/vendors.rb": {
         "lines": [
-
+          1,
+          1,
+          4,
+          4,
+          4,
+          4,
+          4,
+          null,
+          null
         ]
       },
       "/Users/janlehigh/turing/3mod/projects/market_money/config/routes.rb": {
@@ -264,131 +243,25 @@
           1,
           1,
           null,
-=======
-      "/Users/evandavis/Desktop/market_money/spec/factories/markets.rb": {
-        "lines": [
-          1,
-          1,
-          4,
-          4,
-          4,
-          4,
-          4,
-          4,
-          4,
-          4,
           null,
-          null
-        ]
-      },
-      "/Users/evandavis/Desktop/market_money/spec/factories/vendors.rb": {
-        "lines": [
-          1,
-          1,
-          12,
-          12,
-          12,
-          12,
-          12,
           null,
-          null
-        ]
-      },
-      "/Users/evandavis/Desktop/market_money/config/routes.rb": {
-        "lines": [
           1,
           1,
           1,
-          1,
->>>>>>> c463811bb61f4ed24b1802e1ea7a34b1641369d6
           null,
           null,
           null
         ]
       },
-<<<<<<< HEAD
       "/Users/janlehigh/turing/3mod/projects/market_money/app/models/market.rb": {
-=======
-      "/Users/evandavis/Desktop/market_money/app/models/market.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/evandavis/Desktop/market_money/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/evandavis/Desktop/market_money/spec/models/vendor_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/evandavis/Desktop/market_money/app/models/vendor.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/evandavis/Desktop/market_money/spec/requests/api/v0/get_all_markets_spec.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/evandavis/Desktop/market_money/app/models/market_vendor.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/evandavis/Desktop/market_money/app/controllers/api/v0/markets_controller.rb": {
->>>>>>> c463811bb61f4ed24b1802e1ea7a34b1641369d6
         "lines": [
           1,
           1,
           1,
           null,
-<<<<<<< HEAD
+          1,
+          0,
+          null,
           null
         ]
       },
@@ -396,46 +269,38 @@
         "lines": [
           1,
           1,
-=======
-          1,
-          null,
           null
         ]
       },
-      "/Users/evandavis/Desktop/market_money/app/controllers/application_controller.rb": {
+      "/Users/janlehigh/turing/3mod/projects/market_money/spec/models/vendor_spec.rb": {
         "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/evandavis/Desktop/market_money/app/serializers/market_serializer.rb": {
-        "lines": [
-          1,
-          1,
           1,
           null,
+          1,
+          1,
+          2,
           2,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
->>>>>>> c463811bb61f4ed24b1802e1ea7a34b1641369d6
+          null
+        ]
+      },
+      "/Users/janlehigh/turing/3mod/projects/market_money/app/models/vendor.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/janlehigh/turing/3mod/projects/market_money/app/models/market_vendor.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           null
         ]
       }
     },
-<<<<<<< HEAD
-    "timestamp": 1724727549
-=======
-    "timestamp": 1724751543
->>>>>>> c463811bb61f4ed24b1802e1ea7a34b1641369d6
+    "timestamp": 1724800543
   }
 }
