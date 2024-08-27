@@ -11,6 +11,7 @@ class MarketSerializer
         zip: market.zip,
         lat: market.lat,
         lon: market.lon,
+        vendor_count: market.vendors.count
       }
     end
   end

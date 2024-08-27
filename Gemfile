@@ -44,6 +44,7 @@ group :development, :test do
   gem "faker"
   gem "pry-rails"
   gem "simplecov"
+  gem "shoulda-matchers"
 end
 
 group :development do
