@@ -200,14 +200,14 @@
         "lines": [
           1,
           1,
-          4,
-          4,
-          4,
-          4,
-          4,
-          4,
-          4,
-          4,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
           null,
           null
         ]
@@ -216,11 +216,11 @@
         "lines": [
           1,
           1,
-          12,
-          12,
-          12,
-          12,
-          12,
+          24,
+          24,
+          24,
+          24,
+          24,
           null,
           null
         ]
@@ -231,6 +231,8 @@
           1,
           1,
           1,
+          1,
+          null,
           null,
           null,
           null
@@ -300,6 +302,53 @@
           null
         ]
       },
+      "/Users/evandavis/Desktop/market_money/spec/requests/api/v0/get_all_vendors_for_market_spec.rb": {
+        "lines": [
+          null,
+          1,
+          null,
+          1,
+          1,
+          5,
+          5,
+          null,
+          1,
+          3,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          null,
+          null,
+          null,
+          null,
+          1,
+          3,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/evandavis/Desktop/market_money/app/models/market_vendor.rb": {
         "lines": [
           1,
@@ -346,8 +395,45 @@
           null,
           null
         ]
+      },
+      "/Users/evandavis/Desktop/market_money/app/controllers/api/v0/vendors_controller.rb": {
+        "lines": [
+          1,
+          1,
+          4,
+          null,
+          4,
+          2,
+          2,
+          null,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/evandavis/Desktop/market_money/app/serializers/vendor_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          6,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1724751543
+    "timestamp": 1724753698
   }
 }
