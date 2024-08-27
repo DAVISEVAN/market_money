@@ -4,6 +4,11 @@ RSpec.describe "Market Money API" do
   it "can get one market by its id" do
     id = create(:market).id
     
+    vendor = create(:vendor)
+
+    market_vendors = MarketVendor.create(market: id, vendor: vendor)
+
+
     get "/api/v0/markets/#{id}"
 
     market = JSON.parse(response.body, symbolize_names: true)
@@ -36,5 +41,8 @@ RSpec.describe "Market Money API" do
 
     expect(market).to have_key(:lon)
     expect(market[:lon]).to be_a(String)
+    
+    expect(market).to have_key(:vendor_count)
+    expect(market[:vendor_count]).to be_a(String)
   end
 end
