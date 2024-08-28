@@ -5,8 +5,8 @@ FactoryBot.define do
     city { Faker::Address.city }
     county { Faker::Address.community }
     state { Faker::Address.state }
-    zip { Faker::Address.zip }
-    lat { Faker::Address.latitude.to_s }
-    lon { Faker::Address.longitude.to_s  }
+    zip { Faker::Address.zip_code }
+    lat { Faker::Address.latitude }
+    lon { Faker::Address.longitude }
   end
 end
