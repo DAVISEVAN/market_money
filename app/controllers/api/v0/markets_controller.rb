@@ -4,7 +4,17 @@ class Api::V0::MarketsController < ApplicationController
 
   def show 
     markets = Market.all
-
-    render json: MarketSerializer.format_markets(markets), status: :ok
+    begin
+      render json: MarketSerializer.format_markets(markets), status: :ok
+    rescue ActiveRecord::RecordNotFound => exceptions
+      render json: {
+        errors: [
+          {
+            status: "404", 
+            title: exception.message
+          }
+        ]
+      }, status: :not_found
+    end
   end
 end
