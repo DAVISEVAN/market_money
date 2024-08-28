@@ -55,19 +55,13 @@ RSpec.describe "Market Money API" do
   it "will not return a market with a invalid id " do
     id = create(:market).id
 
-    vendor = create(:vendor)
-
-    market_vendors = MarketVendor.create(market_id: id, vendor_id: vendor.id)
-
     get "/api/v0/markets/#{0}"
 
-    expect(response).to be_unsuccessful
+    expect(response).to have_http_status(:not_found)
     expect(response.status).to eq(404)
     
-    markets = JSON.parse(response.body, symbolize_names: true)
+    market_response = JSON.parse(response.body, symbolize_names: true)
 
-    expect(data[:errors]).to be_a(Array)
-    expect(data[:errors].first[:status]).to eq("404")
-    expect(data[:errors].first[:title]).to eq("Couldn't find Market with 'id'=0")
+    expect(market_response[:errors].first[:detail]).to eq("Couldn't find Market with 'id'=0")
   end
 end

@@ -1,10 +1,5 @@
 class Api::V0::MarketsController < ApplicationController
 
-  # def show 
-  #   render json: MarketSerializer.format_market(Market.find(params[:id]))
-  # end
-  
-  ## Evan ##
   def index
     markets = Market.all
     render json: MarketSerializer.new(markets).serializable_hash.to_json, status: :ok
