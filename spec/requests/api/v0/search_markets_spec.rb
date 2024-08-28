@@ -19,18 +19,31 @@ RSpec.describe "Market Money API" do
 
         expect(json["data"].first.["attributes"]["name"]).to eq("Nob Hill Growers Market")
         
+      end
+
+      it "returns an empty array when there are no markets" do
+        get "/api/v0/markets/search", params{city: 'ASDF', state: 'ASDF', name: 'ASDF'}
+
+        expect(response).to have_http_status(:ok)
+
+        expect(json["data"]).to be_empty
 
       end
     end
 
     context "when invalid parameters are sent" do
-      it "cannot get a market when searched by city or name and city"
-        get "/api/v0/markets/search"
+      it "cannot get a market when searched by city (422 error)"
+        get "/api/v0/markets/search", params{city: 'Albuquerque' }
 
-        expect(response).to have_http_status(:not_found)
-        expect(response.status).to eq(422)
-        
-        market_response = JSON.parse(response.body, symbolize_names: true)
+        expect(response).to have_http_status(:unprocessable_entity)
+        expect(json["errors"].first["detail"]).to eq("Invalid set of parameters. Please provide a valid set of parameters to perform a search with this endpoint.")
+      end
+
+      it "returns a 422 error when searching by only city and name without state"
+        get "/api/v0/markets/search", params{city: 'Albuquerque', name: 'Nob Hill Growers Market' }
+
+        expect(response).to have_http_status(:unprocessable_entity)
+        expect(json["errors"].first["detail"]).to eq("Invalid set of parameters. Please provide a valid set of parameters to perform a search with this endpoint.")
       end
     end
   end
