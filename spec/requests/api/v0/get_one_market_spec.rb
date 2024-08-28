@@ -19,7 +19,7 @@ RSpec.describe "Market Money API" do
     expect(response).to be_successful
 
     expect(market_data).to have_key(:id)
-    expect(market_data[:id]).to eq(id)
+    expect(market_data[:id]).to eq(id.to_s)
 
     expect(market_data).to have_key(:id)
     expect(market_data[:type]).to eq("market")
@@ -68,6 +68,6 @@ RSpec.describe "Market Money API" do
 
     expect(data[:errors]).to be_a(Array)
     expect(data[:errors].first[:status]).to eq("404")
-    expect(data[:errors].first[:title]).to eq("Couldn't find Market with 'id'=1")
+    expect(data[:errors].first[:title]).to eq("Couldn't find Market with 'id'=0")
   end
 end
