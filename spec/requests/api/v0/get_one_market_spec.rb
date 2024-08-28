@@ -14,39 +14,42 @@ RSpec.describe "Market Money API" do
 
     market_data = market[:data]
 
+    market_attributes = market_data[:attributes]
+
     expect(response).to be_successful
-    
-    #how to reach through market[:data]
 
     expect(market_data).to have_key(:id)
     expect(market_data[:id]).to eq(id)
 
-    expect(market_data).to have_key(:name)
-    expect(market_data[:name]).to be_a(String)
+    expect(market_data).to have_key(:id)
+    expect(market_data[:type]).to eq("market")
 
-    expect(market_data).to have_key(:street)
-    expect(market_data[:street]).to be_a(String)
+    expect(market_attributes).to have_key(:name)
+    expect(market_attributes[:name]).to be_a(String)
 
-    expect(market_data).to have_key(:city)
-    expect(market_data[:city]).to be_a(String)
+    expect(market_attributes).to have_key(:street)
+    expect(market_attributes[:street]).to be_a(String)
 
-    expect(market_data).to have_key(:county)
-    expect(market_data[:county]).to be_a(String)
+    expect(market_attributes).to have_key(:city)
+    expect(market_attributes[:city]).to be_a(String)
 
-    expect(market_data).to have_key(:state)
-    expect(market_data[:state]).to be_a(String)
+    expect(market_attributes).to have_key(:county)
+    expect(market_attributes[:county]).to be_a(String)
+
+    expect(market_attributes).to have_key(:state)
+    expect(market_attributes[:state]).to be_a(String)
     
-    expect(market_data).to have_key(:zip)
-    expect(market_data[:zip]).to be_a(String)
+    expect(market_attributes).to have_key(:zip)
+    expect(market_attributes[:zip]).to be_a(String)
 
-    expect(market_data).to have_key(:lat)
-    expect(market_data[:lat]).to be_a(String)
+    expect(market_attributes).to have_key(:lat)
+    expect(market_attributes[:lat]).to be_a(String)
 
-    expect(market_data).to have_key(:lon)
-    expect(market_data[:lon]).to be_a(String)
+    expect(market_attributes).to have_key(:lon)
+    expect(market_attributes[:lon]).to be_a(String)
     
-    expect(market_data).to have_key(:vendor_count)
-    expect(market_data[:vendor_count]).to eq(1)
+    expect(market_attributes).to have_key(:vendor_count)
+    expect(market_attributes[:vendor_count]).to eq(1)
   end
 
   it "will not return a market with a invalid id " do
