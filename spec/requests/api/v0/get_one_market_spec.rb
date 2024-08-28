@@ -54,10 +54,15 @@ RSpec.describe "Market Money API" do
 
     market_vendors = MarketVendor.create(market_id: id, vendor_id: vendor.id)
 
-    get "/api/v0/markets/#{Faker::Number.number(digits:10)}"
-
-    markets = JSON.parse(response.body, symbolize_names: true)
+    get "/api/v0/markets/#{0}"
 
     expect(response).to be_unsuccessful
+    expect(response.status).to eq(404)
+    
+    markets = JSON.parse(response.body, symbolize_names: true)
+
+    expect(data[:errors]).to be_a(Array)
+    expect(data[:errors].first[:status]).to eq("404")
+    expect(data[:errors].first[:title]).to eq("Couldn't find Market with 'id'=1")
   end
 end
