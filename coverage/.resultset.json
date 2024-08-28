@@ -202,14 +202,14 @@
         "lines": [
           1,
           1,
-          3,
-          3,
-          3,
-          3,
-          3,
-          3,
-          3,
-          3,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
           null,
           null
         ]
@@ -218,11 +218,11 @@
         "lines": [
           1,
           1,
-          2,
-          2,
-          2,
-          2,
-          2,
+          4,
+          4,
+          4,
+          4,
+          4,
           null,
           null,
           null,
@@ -280,6 +280,27 @@
           null
         ]
       },
+      "/Users/janlehigh/turing/3mod/projects/market_money/spec/models/vendor_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/janlehigh/turing/3mod/projects/market_money/app/models/vendor.rb": {
         "lines": [
           1,
@@ -292,8 +313,8 @@
           1,
           null,
           1,
+          4,
           1,
-          0,
           null,
           null,
           null
@@ -313,84 +334,14 @@
         "lines": [
           1,
           1,
-          1,
+          6,
           0,
           null,
-          null,
-          null
-        ]
-      },
-      "/Users/janlehigh/turing/3mod/projects/market_money/app/controllers/api/v0/markets_controller.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          2,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/janlehigh/turing/3mod/projects/market_money/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/janlehigh/turing/3mod/projects/market_money/app/serializers/market_serializer.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1724864437
+    "timestamp": 1724866394
   }
 }
