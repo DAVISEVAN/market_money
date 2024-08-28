@@ -10,11 +10,11 @@ RSpec.describe "Market Money API" do
 
     get "/api/v0/markets/#{id}"
 
-    markets = JSON.parse(response.body, symbolize_names: true)
+    market = JSON.parse(response.body, symbolize_names: true)
 
     expect(response).to be_successful
     
-    #market[1] 
+    #how to reach through market[:data]
     expect(market).to have_key(:id)
     expect(market[:id]).to eq(id)
 
