@@ -12,38 +12,41 @@ RSpec.describe "Market Money API" do
 
     market = JSON.parse(response.body, symbolize_names: true)
 
+    market_data = market[:data]
+
     expect(response).to be_successful
     
     #how to reach through market[:data]
-    expect(market).to have_key(:id)
-    expect(market[:id]).to eq(id)
 
-    expect(market).to have_key(:name)
-    expect(market[:name]).to be_a(String)
+    expect(market_data).to have_key(:id)
+    expect(market_data[:id]).to eq(id)
 
-    expect(market).to have_key(:street)
-    expect(market[:street]).to be_a(String)
+    expect(market_data).to have_key(:name)
+    expect(market_data[:name]).to be_a(String)
 
-    expect(market).to have_key(:city)
-    expect(market[:city]).to be_a(String)
+    expect(market_data).to have_key(:street)
+    expect(market_data[:street]).to be_a(String)
 
-    expect(market).to have_key(:county)
-    expect(market[:county]).to be_a(String)
+    expect(market_data).to have_key(:city)
+    expect(market_data[:city]).to be_a(String)
 
-    expect(market).to have_key(:state)
-    expect(market[:state]).to be_a(String)
+    expect(market_data).to have_key(:county)
+    expect(market_data[:county]).to be_a(String)
+
+    expect(market_data).to have_key(:state)
+    expect(market_data[:state]).to be_a(String)
     
-    expect(market).to have_key(:zip)
-    expect(market[:zip]).to be_a(String)
+    expect(market_data).to have_key(:zip)
+    expect(market_data[:zip]).to be_a(String)
 
-    expect(market).to have_key(:lat)
-    expect(market[:lat]).to be_a(String)
+    expect(market_data).to have_key(:lat)
+    expect(market_data[:lat]).to be_a(String)
 
-    expect(market).to have_key(:lon)
-    expect(market[:lon]).to be_a(String)
+    expect(market_data).to have_key(:lon)
+    expect(market_data[:lon]).to be_a(String)
     
-    expect(market).to have_key(:vendor_count)
-    expect(market[:vendor_count]).to eq(1)
+    expect(market_data).to have_key(:vendor_count)
+    expect(market_data[:vendor_count]).to eq(1)
   end
 
   it "will not return a market with a invalid id " do
