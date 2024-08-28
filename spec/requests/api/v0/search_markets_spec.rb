@@ -7,11 +7,11 @@
 #     # Try doing let if before each is not working 
 #   let!(:market1) { create(:market, city: 'Albuquerque', state: 'New Mexico', name: 'Nob Hill Growers Market') }
 #   let!(:market2) { create(:market, city: 'Santa Fe', state: 'New Mexico', name: 'Santa Fe Market') }
-  
+
 #   describe "GET /api/v0/markets/search" do
 #     context "when valid parameters are present" do
 #       it "returns correct market" do
-        
+
 #         get "/api/v0/markets/search", params{city: 'Albuquerque', state: 'New Mexico', name: 'Nob Hill Growers Market'}
 
 #         market = JSON.parse(response.body, symbolize_names: true)
@@ -21,7 +21,7 @@
 #         expect(json["data"].length).to eq(1)
 
 #         expect(json["data"].first.["attributes"]["name"]).to eq("Nob Hill Growers Market")
-        
+
 #       end
 
 #       it "returns an empty array when there are no markets" do
@@ -58,7 +58,8 @@ RSpec.describe 'Market Search API', type: :request do
 
   let!(:market1) { create(:market, city: 'Albuquerque', state: 'New Mexico', name: 'Nob Hill Growers\' Market') }
   let!(:market2) { create(:market, city: 'Santa Fe', state: 'New Mexico', name: 'Santa Fe Market') }
-  
+
+  describe "GET /api/v0/markets/search" do
     context 'when valid parameters are provided' do
       it 'returns the correct market(s)' do
         get '/api/v0/markets/search', params: { city: 'albuquerque', state: 'new mexico', name: 'Nob hill' }
