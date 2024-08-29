@@ -27,6 +27,18 @@ class Api::V0::MarketsController < ApplicationController
     end
   end
 
+  def nearest_atms
+    market = Market.find_by(id: params[:id])
+
+    if market
+      atms = fetch_nearest_atms(market)
+
+      render json: AtmSerializer.new(atms).serializable_hash.to_json, status: :ok
+    else
+      render json: { errors: [{ detail: "Couldn't find Market with 'id'=#{params[:id]}" }] }, status: :not_found
+    end
+  end
+
   private
 
   def invalid_search_params?
@@ -36,5 +48,32 @@ class Api::V0::MarketsController < ApplicationController
     city_only || city_and_name
   end
 
+  def fetch_nearest_atms(market)
 
+    connection = Faraday.new('https://api.tomtom.com') do |faraday|
+      faraday.headers['X-Api-Key'] = Rails.application.credentials.tom_tom[:key]
+      faraday.adapter Faraday.default_adapter
+    end
+
+    response = connection.get('/search/2/categorySearch/atm.json', {
+      lat: market.lat,
+      lon: market.lon,
+      radius: 10000,
+    })
+
+    if response.success?
+      json_response = JSON.parse(response.body)
+      json_response['results'].map do |atm|
+        {
+          name: atm['poi']['name'],
+          address: atm['address']['freeformAddress'],
+          lat: atm['position']['lat'],
+          lon: atm['position']['lon'],
+          distance: atm['dist']
+        }
+      end.sort_by { |atm| atm[:distance] }
+    else
+      []
+    end
+  end
 end
