@@ -13,6 +13,16 @@ class Api::V0::MarketsController < ApplicationController
   end
 
   def search
+    if params[:state].present? || params[:state].empty? && params[:name].present?
+      render json: MarketSerializer.new
+    elsif params[:city].present? || params[:name].present? && params[:city].present? && params[:state].empty?
+      
+    end
+  end
 
+  private 
+
+  def market_params
+    params.require(:market).permit(:name, :state, :city)
   end
 end
