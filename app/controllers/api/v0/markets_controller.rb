@@ -13,13 +13,12 @@ class Api::V0::MarketsController < ApplicationController
   end
 
   def search
-
-    if params[:state].present? || params[:state].empty? && params[:name].present?
-      market = Market.where(search_market_params)
+    # nested condition maybe? 
+    if params[:state].present? || params[:state].empty? && params[:name].present? 
+      market = Market.where("state = ? OR state = ? and city =? OR city = ? OR  name = ?", params[:state])
       render json: MarketSerializer.new(market).serializable_hash.to_json, status: :ok
     elsif params[:city].present? || params[:name].present? && params[:city].present? && params[:state].empty?
-      rescue ActiveRecord::RecordNotFound
-        render json: { errors: [{ detail: "Invalid set of parameters. Please provide a valid set of parameters to perform a search with this endpoint." }] }, status: :unprocessable_entity
+      render json: { errors: [{ detail: "Invalid set of parameters. Please provide a valid set of parameters to perform a search with this endpoint." }] }, status: :unprocessable_entity
     end
   end
 
