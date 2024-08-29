@@ -3,5 +3,5 @@ class AtmSerializer
 
   set_type :atm
 
-  attributes :name, :address, :lat, :long, :distance
+  attributes  :name, :address, :lat, :lon, :distance
 end

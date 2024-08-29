@@ -32,6 +32,7 @@ class Api::V0::MarketsController < ApplicationController
 
     if market
       atms = fetch_nearest_atms(market)
+      Rails.logger.debug "ATMs Found: #{atms.inspect}"
 
       render json: AtmSerializer.new(atms).serializable_hash.to_json, status: :ok
     else
@@ -51,7 +52,8 @@ class Api::V0::MarketsController < ApplicationController
   def fetch_nearest_atms(market)
 
     connection = Faraday.new('https://api.tomtom.com') do |faraday|
-      faraday.headers['X-Api-Key'] = Rails.application.credentials.tom_tom[:key]
+     # faraday.headers['X-Api-Key'] = Rails.application.credentials.tom_tom[:key]
+      faraday.params['key'] = Rails.application.credentials.tom_tom[:key]
       faraday.adapter Faraday.default_adapter
     end
 
@@ -60,18 +62,15 @@ class Api::V0::MarketsController < ApplicationController
       lon: market.lon,
       radius: 10000,
     })
-
+   # binding.pry
     if response.success?
-      json_response = JSON.parse(response.body)
+      json_response = JSON.parse(response.body) 
+    #  binding.pry
+      Rails.logger.debug "TomTom API Response: #{json_response.inspect}"
       json_response['results'].map do |atm|
-        {
-          name: atm['poi']['name'],
-          address: atm['address']['freeformAddress'],
-          lat: atm['position']['lat'],
-          lon: atm['position']['lon'],
-          distance: atm['dist']
-        }
-      end.sort_by { |atm| atm[:distance] }
+        
+        Atm.new(atm)
+      end.sort_by(&:distance) 
     else
       []
     end
