@@ -47,6 +47,7 @@ class Api::V0::VendorsController < ApplicationController
     render json: { errors: [{ detail: "Couldn't find Vendor with 'id'=#{params[:id]}" }] }, status: :not_found
   end
 
+  
 
   private
 
